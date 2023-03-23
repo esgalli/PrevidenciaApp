@@ -1,20 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Vazio em branco
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-tabs>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Vaziozao</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-tab-bar slot="bottom">
 
-  <div id="container">
-    <strong>Pronto para criar um app ?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+    <ion-tab-button tab="solicitacao">
+      <ion-icon name="enter-outline"></ion-icon>
+      <ion-label>Solicitação</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="notificacao">
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-label>Notificação</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
