@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="frmLogin" (submit)="logar()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Email input</ion-label>
+        <ion-input type="email" formControlName="email" placeholder="email@domain.com"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password input</ion-label>
+        <ion-input type="password" formControlName="senha" value="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-button [disabled]="frmLogin.invalid || frmLogin.pending" shape="round" type="submit">Login</ion-button>
+        <ion-button shape="round">Esqueci minha senha</ion-button>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
