@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'laudos',
     loadChildren: () => import('./laudos/laudos.module').then( m => m.LaudosPageModule)
+  },
+  {
+    path: 'agendar-pericia',
+    loadChildren: () => import('./agendar-pericia/agendar-pericia.module').then( m => m.AgendarPericiaPageModule)
   }
 ];
 
