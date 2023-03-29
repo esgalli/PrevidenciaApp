@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'gerar-protocolo',
     loadChildren: () => import('./gerar-protocolo/gerar-protocolo.module').then( m => m.GerarProtocoloPageModule)
+  },
+  {
+    path: 'laudos',
+    loadChildren: () => import('./laudos/laudos.module').then( m => m.LaudosPageModule)
   }
 ];
 
