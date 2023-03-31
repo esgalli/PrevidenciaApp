@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'revisar',
     loadChildren: () => import('./revisar/revisar.module').then( m => m.RevisarPageModule)
+  },
+  {
+    path: 'laudos',
+    loadChildren: () => import('./laudos/laudos.module').then( m => m.LaudosPageModule)
+  },
+  {
+    path: 'prova-vida',
+    loadChildren: () => import('./prova-vida/prova-vida.module').then( m => m.ProvaVidaPageModule)
   }
 ];
 
