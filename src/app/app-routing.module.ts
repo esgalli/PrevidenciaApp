@@ -16,6 +16,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'revisar',
+    loadChildren: () => import('./revisar/revisar.module').then( m => m.RevisarPageModule)
+  },
+  {
     path: 'laudos',
     loadChildren: () => import('./laudos/laudos.module').then( m => m.LaudosPageModule)
   },
