@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
 })
 export class ProvaVidaPage implements OnInit {
 
-  frmProvaVida!: FormGroup;
-
   constructor(
     private formBuilder: FormBuilder,
     private router: Router
