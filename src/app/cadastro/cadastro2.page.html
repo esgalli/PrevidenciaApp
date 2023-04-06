@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Cadastro 2
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form [formGroup]="cadastroForm">
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Data de Nascimento</ion-label>
+          <ion-input formControlName="dataNascimento" type="date"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input formControlName="email" type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirme seu Email</ion-label>
+          <ion-input formControlName="confirmaEmail" type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input formControlName="senha" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirme sua Senha</ion-label>
+          <ion-input formControlName="confirmaSenha" type="password"></ion-input>
+        </ion-item>
+      </ion-list>
+  
+      <ion-button expand="block" (click)="submit()">Cadastrar</ion-button>
+    </form>
+  </ion-content>

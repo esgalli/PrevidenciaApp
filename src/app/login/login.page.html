@@ -5,6 +5,9 @@
 </ion-header>
 
 <ion-content>
+  <div class="login-image">
+    <img src="assets/login-image.jpg">
+  </div>
   <form [formGroup]="frmLogin" (submit)="logar()">
     <ion-list>
       <ion-item>
@@ -21,11 +24,6 @@
         <ion-button [disabled]="frmLogin.invalid || frmLogin.pending" shape="round" type="submit">Login</ion-button>
         <ion-button shape="round">Esqueci minha senha</ion-button>
       </ion-item>
-      <ion-item>
-        <ion-button [disabled]="frmLogin.invalid || frmLogin.pending" shape="round" type="submit">Novo Acesso</ion-button>
-        <ion-button shape="round">novoacesso</ion-button>
-      </ion-item>
-
     </ion-list>
   </form>
 </ion-content>
