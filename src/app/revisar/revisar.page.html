@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Revisar Beneficio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="fruit" placeholder="Selecione o tempo de Contribuição">
+        <ion-select-option value="TEMPO">10 A 20</ion-select-option>
+        <ion-select-option value="TEMPO">20 A 30</ion-select-option>
+        <ion-select-option value="TEMPO">30 A 40</ion-select-option>
+        <ion-select-option value="TEMPO">40 A 50</ion-select-option>
+        <ion-select-option value="TEMPO">50 A 65</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-input label="Input with clear button" labelPlacement="stacked" [clearInput]="true" placeholder="Enter text to see clear button" value="Digite o motivo para o recalculo">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button size="small">
+      <ion-icon name="attach"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button>
+        <ion-icon name="document"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-label>Anexe os documentos</ion-label>
+  </ion-fab>
+
+  <ion-button expand="block">FAZER RECALCULO</ion-button>
+  <ion-button expand="block" [disabled]="false">VOLTAR</ion-button>
+
+</ion-content>
