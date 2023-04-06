@@ -6,13 +6,29 @@
 }
 .title {
     text-align: center;
+    color:rgb(0, 0, 0);
 }
 .subtitulo {
     text-align: center;
-    color: rgb(89, 89, 159);
+    font-size: 24px;
+    color: rgb(0, 0, 0);
 }
 
 .calendario {
     border: 1px solid black;
     border-radius: 10px 10px 10px 10px;
+    width: 100vh;
+}
+.checkbox1 {
+    margin: 10px;
+}
+.checkbox2 {
+    margin: 10px;
+}
+.botao {
+    margin-left: 100px;
+    margin-top: 10px;
+}
+ion-content {
+    --background: rgb(65, 173, 180);
 }
