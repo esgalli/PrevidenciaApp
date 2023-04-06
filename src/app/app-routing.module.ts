@@ -12,12 +12,28 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/cadastro',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
   {
-    path: 'cadastro',
-    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+    path: 'gerar-protocolo',
+    loadChildren: () => import('./gerar-protocolo/gerar-protocolo.module').then( m => m.GerarProtocoloPageModule)
+  },
+  {
+    path: 'revisar',
+    loadChildren: () => import('./revisar/revisar.module').then( m => m.RevisarPageModule)
+  },
+  {
+    path: 'laudos',
+    loadChildren: () => import('./laudos/laudos.module').then( m => m.LaudosPageModule)
+  },
+  {
+    path: 'agendar-pericia',
+    loadChildren: () => import('./agendar-pericia/agendar-pericia.module').then( m => m.AgendarPericiaPageModule)
+  },
+  {
+    path: 'prova-vida',
+    loadChildren: () => import('./prova-vida/prova-vida.module').then( m => m.ProvaVidaPageModule)
   }
 ];
 
