@@ -8,16 +8,31 @@
   <form>
     <ion-list>
       <ion-item>
-        <ion-button shape="round" [routerLink]="['/login']"  >Prova de Vida</ion-button>
+        <ion-content>
+          <ion-tab-button tab="solicitacao">
+            <ion-button shape="round" [routerLink]="['/solicitacao']">Voltar</ion-button>
+          </ion-tab-button>
+        </ion-content>
       </ion-item>
     </ion-list>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Online</ion-title>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Presencial</ion-title>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Online</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+       <p>Opção de tirar uma selfie em tempo real.</p> 
+       <p>Necessario a validação</p> 
+      </ion-card-content>
+      <ion-button fill="clear">Tirar Selfie</ion-button>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+          <ion-card-title>Presencial</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+         <p>Agendar com a instituição financeira</p> 
+        </ion-card-content>
+        <ion-button fill="clear">Agendar</ion-button>
+    </ion-card>
   </form>
 </ion-content>
