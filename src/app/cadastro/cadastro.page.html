@@ -1,33 +1,36 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Cadastro 1
-    </ion-title>
+    <ion-title>cadastro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="cadastroForm">
+  <form [formGroup]="frmCadastro" (submit)="cadastrar()">
     <ion-list>
       <ion-item>
-        <ion-label position="floating">Nome</ion-label>
-        <ion-input formControlName="nome" type="text"></ion-input>
+        <ion-label>Default label</ion-label>
+        <ion-input placeholder="Enter text"></ion-input>
       </ion-item>
+    
       <ion-item>
-        <ion-label position="floating">Sobrenome</ion-label>
-        <ion-input formControlName="sobrenome" type="text"></ion-input>
+        <ion-label position="fixed">Fixed label</ion-label>
+        <ion-input placeholder="Enter text"></ion-input>
       </ion-item>
+    
       <ion-item>
-        <ion-label position="floating">CPF</ion-label>
-        <ion-input formControlName="cpf" type="number"></ion-input>
+        <ion-label position="stacked">Stacked label</ion-label>
+        <ion-input placeholder="Enter text"></ion-input>
       </ion-item>
+    
       <ion-item>
-        <ion-label position="floating">RG</ion-label>
-        <ion-input formControlName="rg" type="number"></ion-input>
+        <ion-label position="floating">Floating label</ion-label>
+        <ion-input placeholder="Enter text"></ion-input>
       </ion-item>
     </ion-list>
-
-    <ion-button expand="block" (click)="submit()">Cadastrar</ion-button>
+    <ion-button>Cadastrar</ion-button>
+    <ion-button shape="round">Cadastrar</ion-button>
   </form>
 </ion-content>
+
 

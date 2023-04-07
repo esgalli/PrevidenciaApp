@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'prova-vida',
     loadChildren: () => import('./prova-vida/prova-vida.module').then( m => m.ProvaVidaPageModule)
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   }
 ];
 
