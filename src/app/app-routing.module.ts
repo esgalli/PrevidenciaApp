@@ -35,6 +35,11 @@ const routes: Routes = [
     path: 'prova-vida',
     loadChildren: () => import('./prova-vida/prova-vida.module').then( m => m.ProvaVidaPageModule)
   }
+  //,
+  //{
+  //  path: 'resumo',
+  //  loadChildren: () => import('./resumo/resumo.module').then( m => m.ResumoPageModule)
+ // }
 ];
 
 @NgModule({
