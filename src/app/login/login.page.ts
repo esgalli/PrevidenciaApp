@@ -29,4 +29,8 @@ export class LoginPage implements OnInit {
     console.log(email);
     this.router.navigate(['/home']);
   }
+
+Logar(){
+  console.log('');
+}
 }
