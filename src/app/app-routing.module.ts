@@ -19,6 +19,11 @@ const routes: Routes = [
     path: 'atualizar',
     loadChildren: () => import('./atualizar/atualizar.module').then( m => m.AtualizarPageModule)
   }
+  //,
+  //{
+  //  path: 'resumo',
+  //  loadChildren: () => import('./resumo/resumo.module').then( m => m.ResumoPageModule)
+ // }
 ];
 
 @NgModule({
