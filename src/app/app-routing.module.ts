@@ -26,7 +26,16 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'atualizar',
+    loadChildren: () => import('./atualizar/atualizar.module').then( m => m.AtualizarPageModule)
   }
+  //,
+  //{
+  //  path: 'resumo',
+  //  loadChildren: () => import('./resumo/resumo.module').then( m => m.ResumoPageModule)
+ // }
 ];
 
 @NgModule({

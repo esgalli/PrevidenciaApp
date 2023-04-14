@@ -15,12 +15,5 @@ export class ProvaVidaPage implements OnInit {
   ) { }
 
   ngOnInit() {
-   //this.frmProvaVida = this.formBuilder.group({
-   // });
   }
-
-  provaVida(){
-    this.router.navigate(['/prova-vida']);
-  }
-
 }

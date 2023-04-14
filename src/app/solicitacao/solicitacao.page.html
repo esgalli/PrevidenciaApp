@@ -1,24 +1,60 @@
-<ion-menu contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Solicitações</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">This is the menu content.</ion-content>
-</ion-menu>
-<div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Solicitações</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">
-    <ion-tab-button tab="notificacao">
-      <ion-icon name="notifications-outline"></ion-icon>
-      <ion-label>Agendamento de Perícia</ion-label>
-    </ion-tab-button>
-  </ion-content>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Solicitações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="display: grid;grid-template-columns: 1fr 1fr;">
+
+    <ion-card color="primary" [routerLink]="['/prova-vida']">
+      <ion-card-header>
+        <ion-card-title>Prova de Vida</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-thumbnail slot="start">
+          <ion-icon size="large" color="light" name="people-outline"></ion-icon>
+        </ion-thumbnail>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="warning" [routerLink]="['/agendar-pericia']">
+      <ion-card-header>
+        <ion-card-title>Perícia</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-thumbnail slot="start">
+          <ion-icon size="large" color="dark" name="calendar-number-outline"></ion-icon>
+        </ion-thumbnail>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="success">
+      <ion-card-header>
+        <ion-card-title>Benefício</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-thumbnail slot="start">
+          <ion-icon size="large" name="medal-outline"></ion-icon>
+        </ion-thumbnail>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="danger" [routerLink]="['/revisar']">
+      <ion-card-header>
+        <ion-card-title>Revisão</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-thumbnail slot="start">
+          <ion-icon size="large" name="telescope-sharp"></ion-icon>
+        </ion-thumbnail>
+      </ion-card-content>
+    </ion-card>
+
 </div>
+</ion-content>

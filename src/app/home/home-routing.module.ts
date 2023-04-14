@@ -8,6 +8,10 @@ const routes: Routes = [
     component: HomePage,
     children: [
       {
+        path: 'resumo',
+        loadChildren: () => import('../resumo/resumo.module').then( m => m.ResumoPageModule)
+      },
+      {
         path: 'solicitacao',
         loadChildren: () => import('../solicitacao/solicitacao.module').then( m => m.SolicitacaoPageModule)
       },
@@ -16,8 +20,17 @@ const routes: Routes = [
         loadChildren: () => import('../notificacao/notificacao.module').then( m => m.NotificacaoPageModule)
       },
       {
+        path: 'gerar-protocolo',
+        loadChildren: () => import('../gerar-protocolo/gerar-protocolo.module').then( m => m.GerarProtocoloPageModule)
+      },
+      {
+        path: 'atualizar',
+        loadChildren: () => import('../atualizar/atualizar.module').then( m => m.AtualizarPageModule)
+      },
+
+      {
         path: '',
-        redirectTo: '/home/solicitacao',
+        redirectTo: '/home/resumo',
         pathMatch: 'full'
       }
     ]

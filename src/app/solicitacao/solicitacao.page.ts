@@ -5,6 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './solicitacao.page.html',
   styleUrls: ['./solicitacao.page.scss'],
 })
-export class SolicitacaoPage {
+export class SolicitacaoPage{
+
   constructor() { }
+
+
 }
