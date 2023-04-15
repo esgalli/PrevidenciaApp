@@ -24,6 +24,11 @@ const routes: Routes = [
         loadChildren: () => import('../gerar-protocolo/gerar-protocolo.module').then( m => m.GerarProtocoloPageModule)
       },
       {
+        path: 'atualizar',
+        loadChildren: () => import('../atualizar/atualizar.module').then( m => m.AtualizarPageModule)
+      },
+
+      {
         path: '',
         redirectTo: '/home/resumo',
         pathMatch: 'full'
