@@ -6,13 +6,27 @@
 }
 .title {
     text-align: center;
+    font-size: 28px;
 }
 .subtitulo {
     text-align: center;
-    color: rgb(89, 89, 159);
+    color: rgb(0, 0, 0);
 }
 
 .calendario {
-    border: 1px solid black;
+    border: 0px solid black;
     border-radius: 10px 10px 10px 10px;
+    height: 350px;
+}
+.subtitulo2 {
+    text-align: center;
+}
+.content {
+    
+}
+#botao {
+    
+}
+.botao {
+    text-align: center;
 }
