@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="titulo">login</ion-title>
+    <img src="assets/meuinss.png" alt="">
   </ion-toolbar>
 </ion-header>
 
@@ -9,22 +9,15 @@
     <ion-list>
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input placeholder="Insira um email válido"></ion-input>
+        <ion-input formControlName="email" placeholder="email@domain.com"></ion-input>
       </ion-item>
     </ion-list>
     <ion-list>
       <ion-item>
         <ion-label position="floating">Senha</ion-label>
-        <ion-input placeholder="Insira uma senha válida"></ion-input>
-      </ion-item>    
-      <ion-item>
-        <ion-checkbox slot="start"></ion-checkbox>
-        <ion-label>Lembre-me</ion-label>
+        <ion-input type="password" formControlName="senha" placeholder="Insira uma senha válida"></ion-input>
       </ion-item>
-      <ion-item>
-        <ion-input placeholder="Esqueci minha senha"></ion-input>
-      </ion-item>
-      <ion-item>
+     <ion-item>
         <ion-button [disabled]="frmLogin.invalid || frmLogin.pending" shape="round" type="submit">Login</ion-button>
         <ion-button shape="round">Esqueci minha senha</ion-button>
       </ion-item>
