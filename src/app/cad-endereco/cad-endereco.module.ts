@@ -4,18 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProximoPageRoutingModule } from './proximo-routing.module';
+import { CadEnderecoPageRoutingModule } from './cad-endereco-routing.module';
 
-import { ProximoPage } from './proximo.page';
+import { CadEnderecoPage } from './cad-endereco.page';
 
 @NgModule({
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
-    ProximoPageRoutingModule
+    CadEnderecoPageRoutingModule
   ],
-  declarations: [ProximoPage]
+  declarations: [CadEnderecoPage]
 })
-export class ProximoPageModule {}
+export class CadEnderecoPageModule {}

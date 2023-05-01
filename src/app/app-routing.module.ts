@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/initial',
     pathMatch: 'full'
   },
   {
@@ -20,17 +20,18 @@ const routes: Routes = [
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },
   {
-    path: 'proximo',
-    loadChildren: () => import('./proximo/proximo.module').then( m => m.ProximoPageModule)
-  },
-  {
-    path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
-  },
-  {
     path: 'atualizar',
     loadChildren: () => import('./atualizar/atualizar.module').then( m => m.AtualizarPageModule)
+  },
+  {
+    path: 'initial',
+    loadChildren: () => import('./initial/initial.module').then( m => m.InitialPageModule)
+  },
+  {
+    path: 'cad-endereco',
+    loadChildren: () => import('./cad-endereco/cad-endereco.module').then( m => m.CadEnderecoPageModule)
   }
+
   //,
   //{
   //  path: 'resumo',

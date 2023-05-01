@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ProximoPage } from './proximo.page';
+import { CadEnderecoPage } from './cad-endereco.page';
 
-describe('ProximoPage', () => {
-  let component: ProximoPage;
-  let fixture: ComponentFixture<ProximoPage>;
+describe('CadEnderecoPage', () => {
+  let component: CadEnderecoPage;
+  let fixture: ComponentFixture<CadEnderecoPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProximoPage ],
+      declarations: [ CadEnderecoPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ProximoPage);
+    fixture = TestBed.createComponent(CadEnderecoPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
