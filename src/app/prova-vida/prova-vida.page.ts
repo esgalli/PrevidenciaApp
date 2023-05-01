@@ -16,4 +16,8 @@ export class ProvaVidaPage implements OnInit {
 
   ngOnInit() {
   }
+
+  baterFoto(){
+
+  }
 }
