@@ -11,6 +11,7 @@ import { AlertController } from '@ionic/angular';
 export class SolicitarbeneficioPage implements OnInit {
 
   frmSolicitar!: FormGroup;
+  isAlertOpen!: boolean;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -21,15 +22,12 @@ export class SolicitarbeneficioPage implements OnInit {
     this.frmSolicitar = this.formBuilder.group({
   });
   }
+
   solicitarbeneficio(){
     console.log('');
   }
 
-  export class ExampleComponent {
-    isAlertOpen = false;
-    public alertButtons = ['OK'];
-  
-    setOpen(isOpen: boolean) {
-      this.isAlertOpen = isOpen;
-    }
+  setOpen(isOpen: boolean) {
+    this.isAlertOpen = isOpen;
+  }
 }

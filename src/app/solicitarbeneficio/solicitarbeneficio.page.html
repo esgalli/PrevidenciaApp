@@ -24,27 +24,16 @@
       <ion-label position="floating">NIT</ion-label>
       <ion-input placeholder=""></ion-input>
     </ion-item>
-    
+
     <ion-item fill="outline">
       <ion-label position="floating">Idade</ion-label>
       <ion-input placeholder=""></ion-input>
     </ion-item>
-    
+
     <ion-item fill="outline">
       <ion-label position="floating">Tempo Contribuido</ion-label>
       <ion-input placeholder=""></ion-input>
     </ion-item>
-
-    <ion-button (click)="setOpen(true)">Click Me</ion-button>
-    <ion-alert
-      [isOpen]="isAlertOpen"
-      header="Alert"
-      subHeader="Important message"
-      message="This is an alert!"
-      [buttons]="alertButtons"
-      (didDismiss)="setOpen(false)"
-    ></ion-alert>
-
   </form>
 
 </ion-content>
