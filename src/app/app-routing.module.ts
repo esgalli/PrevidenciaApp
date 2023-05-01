@@ -16,6 +16,18 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
+    path: 'proximo',
+    loadChildren: () => import('./proximo/proximo.module').then( m => m.ProximoPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
     path: 'atualizar',
     loadChildren: () => import('./atualizar/atualizar.module').then( m => m.AtualizarPageModule)
   }

@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="frmCadastro" (submit)="cadastrar()">
+
+    <ion-item>
+      <ion-label position="stacked">Nome</ion-label>
+      <ion-input placeholder="Insira o primeiro nome "></ion-input>
+    </ion-item>
+  <ion-item>
+      <ion-label position="stacked">Sobrenome</ion-label>
+      <ion-input placeholder="Insira o sobrenome"></ion-input>
+    </ion-item>
+  <ion-item>
+      <ion-label position="stacked">RG</ion-label>
+      <ion-input placeholder="00.000.000-00"></ion-input>
+    </ion-item>
+  <ion-item>
+      <ion-label position="stacked">CPF</ion-label>
+      <ion-input placeholder="000.000.000-00"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Data de nascimento</ion-label>
+      <ion-input placeholder="DD/MM/AAAA"></ion-input>
+    </ion-item><br><br>
+    <ion-button>Proximo</ion-button>
+  </form>
+</ion-content>
