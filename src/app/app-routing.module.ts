@@ -16,6 +16,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'solicitarbeneficio',
+    loadChildren: () => import('./solicitarbeneficio/solicitarbeneficio.module').then( m => m.SolicitarbeneficioPageModule)
+  },
+  {
     path: 'cadastro',
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },

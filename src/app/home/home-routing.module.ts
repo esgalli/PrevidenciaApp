@@ -44,6 +44,10 @@ const routes: Routes = [
         loadChildren: () => import('../revisar/revisar.module').then( m => m.RevisarPageModule)
       },
       {
+        path: 'solicitarbeneficio',
+        loadChildren: () => import('../solicitarbeneficio/solicitarbeneficio.module').then( m => m.SolicitarbeneficioPageModule)
+      },
+      {
         path: '',
         redirectTo: '/home/resumo',
         pathMatch: 'full'
