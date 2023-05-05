@@ -5,10 +5,14 @@
       <ion-title>Minhas Informações</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
-    <ion-menu-toggle>
-      <ion-label [routerLink]="['/home/atualizar']">Atualização Cadastral</ion-label>
-    </ion-menu-toggle>
+  <ion-content class="ion-padding" [routerLink]="['/home/atualizar']">
+    Atualização Cadastral
+  </ion-content>
+  <ion-content class="ion-padding" [routerLink]="['/initial']">
+    <ion-item>
+      <ion-label>Sair</ion-label>
+      <ion-icon name="log-out-outline" size="large" slot="start"></ion-icon>
+    </ion-item>
   </ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
@@ -30,7 +34,7 @@
             </ion-thumbnail>
             <ion-label>Meus Atendimentos</ion-label>
           </ion-item>
-          <ion-item [routerLink]="['/laudos']">
+          <ion-item [routerLink]="['/home/laudos']">
             <ion-thumbnail slot="start">
               <img alt="Arquivo" src="../assets/laudo.png" />
             </ion-thumbnail>

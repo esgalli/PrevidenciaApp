@@ -12,13 +12,30 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/initial',
     pathMatch: 'full'
+  },
+  {
+    path: 'solicitarbeneficio',
+    loadChildren: () => import('./solicitarbeneficio/solicitarbeneficio.module').then( m => m.SolicitarbeneficioPageModule)
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },
   {
     path: 'atualizar',
     loadChildren: () => import('./atualizar/atualizar.module').then( m => m.AtualizarPageModule)
+  },
+  {
+    path: 'initial',
+    loadChildren: () => import('./initial/initial.module').then( m => m.InitialPageModule)
+  },
+  {
+    path: 'cad-endereco',
+    loadChildren: () => import('./cad-endereco/cad-endereco.module').then( m => m.CadEnderecoPageModule)
   }
+
   //,
   //{
   //  path: 'resumo',
