@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionSheetController } from '@ionic/angular';
+import { UserPhoto, CameraService } from '../services/camera.service';
 
 @Component({
   selector: 'app-atualizar',
@@ -7,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AtualizarPage implements OnInit {
 
-  constructor() { }
+  constructor(public cameraService: CameraService, public actionSheetController: ActionSheetController) {}
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.cameraService.loadSaved();
   }
-
 }
