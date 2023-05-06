@@ -10,22 +10,10 @@ import { Camera, CameraResultType } from '@capacitor/camera';
 })
 export class ProvaVidaPage implements OnInit {
 
-  imagem = string;
-
   constructor(
     private formBuilder: FormBuilder,
     private router: Router
   ) { }
-
-  async baterFoto(){
-    const image = await Camera.getPhoto({
-      quality: 100,
-      allowEditing: false,
-      resultType: CameraResultType.DataUrl,
-    })
-
-    this.imagem = image.dataUrl;
-  }
 
   ngOnInit() {
   }
