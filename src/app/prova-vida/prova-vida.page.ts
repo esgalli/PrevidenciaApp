@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Camera, CameraResultType } from '@capacitor/camera';
+import { ActionSheetController } from '@ionic/angular';
+import { CameraService } from '../services/camera.service';
 
 @Component({
   selector: 'app-prova-vida',
@@ -10,11 +10,15 @@ import { Camera, CameraResultType } from '@capacitor/camera';
 })
 export class ProvaVidaPage implements OnInit {
 
+
+
   constructor(
-    private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    public cameraService: CameraService,
+    public actionSheetController: ActionSheetController
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.cameraService.capturarFoto();
   }
 }
