@@ -1,44 +1,34 @@
+// Imports de libs/ bibliotecas de terceiro
 import { Endereco } from './../cad-endereco/endereco';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, Observable, tap, of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ViaCEPService {
 
-  private apiUrl = "https://viacep.com.br/ws/";
-  private cepObs!: Observable<Endereco>;
+  //Propriedades 
+  private apiUrl = "https://viacep.com.br/ws/"; // armazena a url da api
+  // objeto observador responsável por nos trazer o retorno da api
+  private cepObs!: Observable<Endereco>; 
+  // classe model que irá armazenar o meu endereço completo
   private endereco: Endereco;
 
+  // aqui é são inicializados os objetos que precisaremos para executar este serviço.
+  // injetamos a dependencia do httpClient
   constructor(private http: HttpClient) {
-    this.endereco = new Endereco();
+    this.endereco = new Endereco(); // cria objeto vazio
   }
-/*
-  async consultaCEP( cep: string): Promise<Endereco>{
-    this.http.get<Endereco>(this.apiUrl + cep + "/json/")
-            .subscribe(response => { this.endereco = response });
-
-    //console.log('funcao: ' + this.endereco.logradouro);
-    return this.endereco;
-  }
-*/
-
-  getEndereco(cep: string): Observable<Endereco[]> {
-    return this.http.get<Endereco[]>(this.apiUrl + cep + "/json/")
-      .pipe(
-        tap(_=> console.log('Endereco:' + cep)),
-        catchError(this.handleError<Endereco[]>(`Get Endereco cep=${cep}`))
-        );
-  }
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error);
-      console.log(`${operation} failed: ${error.message}`);
-      return of(result as T);
-    };
-  }
-
+// criação do método que realiza a chamada da api via cep;
+// este método recebe o cep e devolve um objeto observable com o objeto endereço dentro dele
+getEndereco(cep: string): Observable<Endereco> {
+// a chamada acontece invocando o objeto http definido no construtor desta classe.
+// utilizo aqui o map que irá mapear o retorno da api para o objeto o qual foi 
+//referenciado no método get (Endereco)
+  return this.http.get<Endereco>(this.apiUrl + cep + "/json/")
+    .pipe(map((rs) => rs));
+}
 }
