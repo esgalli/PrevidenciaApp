@@ -14,10 +14,8 @@
       <ion-label position="stacked">Estado</ion-label>
       <ion-list>
           <ion-item>
-            <ion-select interface="popover" placeholder="Selecione o estado">
-              <ion-select-option value="São Paulo">SP</ion-select-option>
-              <ion-select-option value="Minas Gerais">MG</ion-select-option>
-              <ion-select-option value="Rio de Janeiro">RJ</ion-select-option>
+            <ion-select id="UnidadeFederativa" interface="popover" placeholder="Selecione o estado" [([(ngModel)]="uf.estado")]>
+              <ion-option **ngFor="let item of list" value="{{UnidadeFederativa}}">{{uf.estado}}</ion-option>
             </ion-select>
           </ion-item>
       </ion-list>
