@@ -1,22 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <img src="assets/meuinss.png" alt="">
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <form [formGroup]="frmLogin" (submit)="logar()">
-    <ion-list>
       <ion-item>
-        <ion-label>Email input</ion-label>
-        <ion-input type="email" formControlName="email" placeholder="email@domain.com"></ion-input>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" placeholder="email@domain.com"></ion-input>
+        <ion-icon name="mail" slot="start"></ion-icon>
       </ion-item>
 
       <ion-item>
-        <ion-label>Password input</ion-label>
-        <ion-input type="password" formControlName="senha" value="password"></ion-input>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type="password" formControlName="senha" placeholder="Insira uma senha válida"></ion-input>
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
       </ion-item>
 
+<<<<<<< HEAD
       <ion-item>
         <ion-button [disabled]="frmLogin.invalid || frmLogin.pending" shape="round" type="submit">Login</ion-button>
         <ion-button shape="round">Esqueci minha senha</ion-button>
@@ -27,5 +29,8 @@
       </ion-item>
 
     </ion-list>
+=======
+    <ion-button [disabled]="frmLogin.invalid || frmLogin.pending" expand="full" type="submit">Entrar</ion-button>
+>>>>>>> 84e4a677f71818e7964039685b4dbca8fcc81a91
   </form>
 </ion-content>

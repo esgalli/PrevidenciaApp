@@ -12,29 +12,43 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/initial',
     pathMatch: 'full'
   },
   {
     path: 'gerar-protocolo',
     loadChildren: () => import('./gerar-protocolo/gerar-protocolo.module').then( m => m.GerarProtocoloPageModule)
+  }
+  {
+    path: 'solicitarbeneficio',
+    loadChildren: () => import('./solicitarbeneficio/solicitarbeneficio.module').then( m => m.SolicitarbeneficioPageModule)
   },
   {
-    path: 'revisar',
-    loadChildren: () => import('./revisar/revisar.module').then( m => m.RevisarPageModule)
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },
   {
-    path: 'laudos',
-    loadChildren: () => import('./laudos/laudos.module').then( m => m.LaudosPageModule)
+    path: 'atualizar',
+    loadChildren: () => import('./atualizar/atualizar.module').then( m => m.AtualizarPageModule)
   },
   {
-    path: 'agendar-pericia',
-    loadChildren: () => import('./agendar-pericia/agendar-pericia.module').then( m => m.AgendarPericiaPageModule)
+    path: 'initial',
+    loadChildren: () => import('./initial/initial.module').then( m => m.InitialPageModule)
   },
   {
     path: 'prova-vida',
     loadChildren: () => import('./prova-vida/prova-vida.module').then( m => m.ProvaVidaPageModule)
   }
+  {
+    path: 'cad-endereco',
+    loadChildren: () => import('./cad-endereco/cad-endereco.module').then( m => m.CadEnderecoPageModule)
+  }
+
+  //,
+  //{
+  //  path: 'resumo',
+  //  loadChildren: () => import('./resumo/resumo.module').then( m => m.ResumoPageModule)
+ // }
 ];
 
 @NgModule({

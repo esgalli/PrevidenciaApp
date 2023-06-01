@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>solicitarbenefício</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="frmSolicitar" (submit)="solicitarbeneficio()">
+    <ion-list>
+      <ion-item>
+        <ion-select interface="popover" placeholder="Selecionar Benefício">
+          <ion-select-option value="Aposentadoria">Aposentadoria</ion-select-option>
+          <ion-select-option value="Auxílio Acidente">Auxílio Acidente</ion-select-option>
+          <ion-select-option value="Auxílio Doença">Auxílio Doença</ion-select-option>
+          <ion-select-option value="Pensão por Morte">Pensão por Morte</ion-select-option>
+          <ion-select-option value="Reclusão Rural">Auxílio Reclusão Rural</ion-select-option>
+          <ion-select-option value="Reclusão Urbana">Auxílio Reclusão Urbana</ion-select-option>
+          <ion-select-option value="Doença da Aeronauta Gestante">Auxílio Doença da Aeronauta Gestante</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-item fill="outline">
+      <ion-label position="floating">NIT</ion-label>
+      <ion-input placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-item fill="outline">
+      <ion-label position="floating">Idade</ion-label>
+      <ion-input placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-item fill="outline">
+      <ion-label position="floating">Tempo Contribuido</ion-label>
+      <ion-input placeholder=""></ion-input>
+    </ion-item>
+  </form>
+
+</ion-content>
