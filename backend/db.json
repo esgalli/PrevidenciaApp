@@ -1,0 +1,8 @@
+{
+"status-prova-vida": [
+    {"Status": "Pendente"},
+    {"Status": "Aguardando Verificação"},
+    {"Status": "Deferido"},
+    {"Status": "Indeferido"}
+]
+}
