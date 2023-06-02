@@ -10,8 +10,6 @@ import { CameraService } from '../services/camera.service';
 })
 export class ProvaVidaPage implements OnInit {
 
-
-
   constructor(
     private router: Router,
     public cameraService: CameraService,
