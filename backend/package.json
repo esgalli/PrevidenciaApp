@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "start": "json-server --watch db.json --port 3000"
+>>>>>>> 84e4a677f71818e7964039685b4dbca8fcc81a91
   },
   "keywords": [],
   "author": "",
