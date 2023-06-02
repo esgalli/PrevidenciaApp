@@ -9,6 +9,11 @@
     "Pessoa":[
         {"nome": "Sebastião", "idade": 45},
         {"nome": "João", "idade": 54}
+    ],
+
+    "TipoBeneficio":[
+        {"descricao": "Aposentadoria"},
+
     ]
   }
   
