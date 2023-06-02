@@ -29,12 +29,26 @@ export class CadEnderecoPage implements OnInit {
 
   ngOnInit() {
     this.createForm(new Endereco());
-    this.ufService.listarUF();
+    this.listarUF();
+    console.log(this)
   }
 
   avancar(){
     console.log('Enviei !!');
     this.router.navigate(['/home']);
+  }
+
+  async listarUF(){
+    this.ufService.listarUF().subscribe({ next: ((result) => { this.listaUFs = result }),
+    error:((error) => {
+      console.log('Erorr occurred' + error)
+    }),
+    complete:(() => {
+      // aqui é chamado um métod que realiza o preenchimento do formulário html com os dados retornados da api
+      console.log(this.listaUFs.toString());
+    })
+    })
+
   }
 
   async consultaCEP(){
