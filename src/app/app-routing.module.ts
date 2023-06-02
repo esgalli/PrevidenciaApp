@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'gerar-protocolo',
     loadChildren: () => import('./gerar-protocolo/gerar-protocolo.module').then( m => m.GerarProtocoloPageModule)
-  }
+  },
   {
     path: 'solicitarbeneficio',
     loadChildren: () => import('./solicitarbeneficio/solicitarbeneficio.module').then( m => m.SolicitarbeneficioPageModule)
@@ -38,7 +38,7 @@ const routes: Routes = [
   {
     path: 'prova-vida',
     loadChildren: () => import('./prova-vida/prova-vida.module').then( m => m.ProvaVidaPageModule)
-  }
+  },
   {
     path: 'cad-endereco',
     loadChildren: () => import('./cad-endereco/cad-endereco.module').then( m => m.CadEnderecoPageModule)
