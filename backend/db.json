@@ -9,6 +9,16 @@
     "Pessoa":[
         {"nome": "Sebastião", "idade": 45},
         {"nome": "João", "idade": 54}
+    ],
+
+    "TipoBeneficio":[
+        {"Descrição": "Aposentadoria"},
+        {"Descrição": "Auxílio Acidente"},
+        {"Descrição": "Auxílio Doença"},
+        {"Descrição": "Pensão por Morte"},
+        {"Descrição": "Reclusão Rural"},
+        {"Descrição": "Reclusão Urbana"},
+        {"Descrição": "Doença da Aeronauta Gestante"}
     ]
   }
   
