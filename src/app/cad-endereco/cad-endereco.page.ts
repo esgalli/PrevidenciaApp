@@ -1,3 +1,5 @@
+import { UfServiceService } from './../services/uf-service.service';
+import { Uf } from './../model/uf';
 import { Endereco } from './endereco';
 import { ViaCEPService } from './../services/via-cep.service';
 import { Component, OnInit } from '@angular/core';
@@ -16,14 +18,18 @@ export class CadEnderecoPage implements OnInit {
   frmEndereco!: FormGroup;
 
   endereco!: Endereco;
+  listaUFs: Uf[] = [];
+
 // inicializa algumas propriedades que o componente necessita.
   constructor( private formBuilder: FormBuilder, // construção do formulário
                private router: Router,
-               private viaCep: ViaCEPService
+               private viaCep: ViaCEPService,
+               private ufService: UfServiceService
   ) {}
 
   ngOnInit() {
     this.createForm(new Endereco());
+    this.ufService.listarUF();
   }
 
   avancar(){
@@ -35,7 +41,7 @@ export class CadEnderecoPage implements OnInit {
     // crio uma constante que receberá do formulário html/ controle o valor do cep
     const cepValue = this.frmEndereco.controls['cep'].value;
     //invoco o método do serviço (service) getEndereco que retorna o objeto observable
-    // é chamado o método subscribe que contém para onde será enviado o retorno da pi, 
+    // é chamado o método subscribe que contém para onde será enviado o retorno da pi,
     // que neste caso é o objeto endereco
     this.viaCep.getEndereco(cepValue).subscribe({ next: ((result) => { this.endereco = result }),
     error:((error) => {
@@ -48,7 +54,7 @@ export class CadEnderecoPage implements OnInit {
     })
   }
 
-  //método onde é criado o meu formulário e já o popula com os valores 
+  //método onde é criado o meu formulário e já o popula com os valores
   // do objeto endereco, ou seja, caso meu objeto endereco esteja populado então o formulário
   // será criado já populado.
   createForm(endereco: Endereco){
@@ -64,6 +70,6 @@ export class CadEnderecoPage implements OnInit {
   populaEndereco(endereco: Endereco){
     this.frmEndereco.controls['logradouro'].setValue(endereco.logradouro);
     this.frmEndereco.controls['cidade'].setValue(endereco.localidade);
-    this.frmEndereco.controls['bairro'].setValue(endereco.bairro);    
+    this.frmEndereco.controls['bairro'].setValue(endereco.bairro);
   }
 }
