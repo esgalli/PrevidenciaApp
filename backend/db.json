@@ -27,5 +27,11 @@
       {"nome": "São Paulo", "sigla": "SP"},
       {"nome": "Sergipe", "sigla": "SE"},
       {"nome": "Tocantins", "sigla": "TO"}
-  ]
-}
+  ],
+  
+    "Pessoa":[
+        {"nome": "Sebastião", "idade": 45},
+        {"nome": "João", "idade": 54}
+    ]
+  }
+  
